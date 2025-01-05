@@ -1,0 +1,111 @@
+.selected-movie-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    content: '';
+    @apply flex items-center justify-center
+}
+
+.selected-movie-cont{
+    position: relative;
+    background-color: #010101;
+    @apply h-[90vh] sm:h-[75vh]  md:h-[85vh] lg:h-[82vh]  xl:h-[82vh] 2xl:h-[82vh]
+    w-[85%] sm:w-[60%] lg:w-[80%] lg:aspect-[2.5/1] shadow-2xl rounded-xl border border-neutral-900 
+    text-white flex flex-col lg:flex-row 
+}
+
+.close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    @apply hover:cursor-pointer text-red-700 hover:text-pink-700
+}
+
+.s-m-left{
+    @apply h-[75%] w-[100%] lg:w-[30%] lg:h-[100%] border-r border-neutral-800
+    flex items-center justify-between flex-col border 
+}
+
+.s-m-left-poster{
+    @apply border border-neutral-800 object-contain h-[60%] sm:h-[70%] lg:h-[80%]
+}
+
+.s-m-l-top{
+    @apply h-[100%] lg:h-[85%] lg:w-[100%] flex items-center 
+    justify-around flex-col overflow-scroll border-red-700
+}
+
+.movie-title-sm{
+    @apply text-2xl sm:text-4xl md:text-4xl font-bold text-red-700 text-center
+    bg-gradient-to-r from-red-700 to-pink-700 
+    bg-clip-text text-transparent cursor-default
+    animate-gradientLoop bg-[length:200%_200%]
+}
+
+.raitings{
+    @apply h-[15%] lg:h-[15%] w-[100%] 
+    border-t border-neutral-800 flex flex-row
+}
+
+.rater{
+    height: 100%;
+    width: 50%;
+    @apply hover:cursor-pointer bg-transparent
+}
+
+.rottentomatoes{
+    height: 100%;
+    width: 50%;
+    @apply object-contain hover:bg-[#fa320a] text-white
+    ease-in-out transition duration-200 lg:rounded-bl-xl
+}
+
+.imdb{
+    height: 100%;
+    width: 50%;
+    @apply object-contain hover:bg-[#f6c800] text-black
+    ease-in-out transition duration-200
+}
+
+.image-bg{
+    @apply relative w-full h-full flex 
+    items-center justify-center overflow-hidden text-4xl
+}
+
+.image-bg img {
+    @apply absolute inset-0 w-full h-full 
+    object-cover transition-opacity duration-200 ease-in-out
+  }
+  
+.rater:hover .image-bg img {
+    @apply opacity-0 overflow-hidden
+}
+
+.s-m-right{
+    @apply overflow-scroll h-[25%] w-[100%] lg:w-[70%] lg:h-[100%]
+}
+
+.details{
+    height: 100%;
+    width: 100%;
+    @apply flex flex-col gap-3 overflow-scroll py-2
+}
+
+.detail{
+    width: 100%;
+    @apply h-[60%] lg:h-[15%] flex flex-col justify-center lg:py-3 px-5
+    border-neutral-800 lg:text-2xl font-bold border-b 
+}
+
+.detail p{
+    @apply text-sm md:text-base lg:text-lg 
+}
+
+.gray-text{
+    @apply  animate-gradientLoop bg-gradient-to-r from-neutral-300
+    to-neutral-600 bg-clip-text text-transparent bg-[length:200%_200%]
+}

@@ -1,0 +1,62 @@
+.movie-card-wrapper{
+    aspect-ratio: 2.2/1;
+    background-color: transparent;
+    @apply sm:h-64 h-44 p-1
+     border-4 border-transparent rounded-xl
+     hover:border-4 hover:border-neutral-500 hover:cursor-pointer
+     transition ease-in-out duration-200 
+}
+
+.movie-card{
+    height: 100%;
+    width: 100%;
+    @apply flex flex-row rounded-lg
+    hover:shadow-movie-card border border-neutral-900
+    transition ease-in-out duration-200
+}
+
+.card-poster{
+    height: 100%;
+    width: 100%;
+    @apply z-0
+}
+
+.m-c-left{
+    height: 100%;
+    width: 30%;
+    @apply rounded-bl-lg rounded-tl-lg overflow-hidden
+     border-r border-neutral-800
+}
+
+.m-c-right{
+    position: relative;
+    height: 100%;
+    width: 70%;
+    @apply text-white flex flex-col
+}
+
+.card-rating{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    @apply flex flex-row justify-center gap-1 text-sm
+}
+
+.movie-released{
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    @apply font-semibold text-sm text-red-700 self-end flex flex-row gap-1 py-4
+}
+
+.movie-plot{
+    @apply text-xs text-neutral-500
+}
+
+.movie-title{
+    width: 70%;
+    @apply font-bold text-xl sm:text-3xl text-red-700
+    bg-gradient-to-r from-red-700 to-pink-700 
+    bg-clip-text text-transparent cursor-default
+    animate-gradientLoop bg-[length:200%_200%]
+}
